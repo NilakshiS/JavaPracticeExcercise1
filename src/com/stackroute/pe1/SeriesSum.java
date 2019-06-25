@@ -1,3 +1,5 @@
+package com.stackroute.pe1;
+
 import java.util.Scanner;
 
 public class SeriesSum {

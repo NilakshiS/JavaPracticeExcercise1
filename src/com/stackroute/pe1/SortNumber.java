@@ -1,3 +1,5 @@
+package com.stackroute.pe1;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
