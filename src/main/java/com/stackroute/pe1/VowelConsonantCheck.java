@@ -10,20 +10,26 @@ public class VowelConsonantCheck {
         System.out.println("Enter word to be checked: ");
         userInput = inputObject.nextLine();
 
-        for (int i = 0;i<userInput.length();i++) {
-            char letter = userInput.charAt(i);
+        VowelConsonantCheck vowelConsonantCheck = new VowelConsonantCheck();
+        System.out.println(vowelConsonantCheck.checkLetter(userInput));
+
+    }
+    public String checkLetter(String word) {
+        String output = "";
+        for (int i = 0;i<word.length();i++) {
+            char letter = word.charAt(i);
             if (!Character.isLetter(letter)){
-                System.out.println("Error! not a letter!");
+                output += "Error! not a letter! ";
             }
             else {
                 if (letter=='a' || letter=='e' || letter=='i' || letter=='o' || letter=='u') {
-                    System.out.print("Vowel ");
+                    output += "Vowel ";
                 }
                 else {
-                    System.out.print("Consonant ");
+                    output += "Consonant ";
                 }
             }
-
         }
+        return output;
     }
 }
