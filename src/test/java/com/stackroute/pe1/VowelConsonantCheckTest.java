@@ -20,6 +20,16 @@ public class VowelConsonantCheckTest {
     }
 
     @Test
+    public void givenNullShouldNull() {
+        //Arrange
+
+        //Act
+        String result = vowelConsonantCheck.checkLetter(null);
+        //Assert
+        assertNull(result);
+    }
+
+    @Test
     public void givenSingleVowelShouldReturnVowel() {
         //Arrange
 

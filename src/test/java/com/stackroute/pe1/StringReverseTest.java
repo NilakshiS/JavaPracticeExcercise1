@@ -21,6 +21,16 @@ public class StringReverseTest {
     }
 
     @Test
+    public void givenNullReturnNull() {
+        //arrange
+
+        //Act
+        String result = stringReverse.reverse(null);
+        //Assert
+        assertNull(result);
+    }
+
+    @Test
     public void givenStringShouldReturnReversedString() {
         //arrange
 

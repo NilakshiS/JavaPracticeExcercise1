@@ -20,6 +20,16 @@ public class SeriesSumTest {
     }
 
     @Test
+    public void givenNullInputShouldZero() {
+        //Arrange
+
+        //Act
+        int result = seriesSum.getSum(null);
+        //Assert
+        assertEquals(0,result);
+    }
+
+    @Test
     public void givenSeriesOfPositiveNumbersShouldReturnCorrectAnswer() {
         //Arrange
 

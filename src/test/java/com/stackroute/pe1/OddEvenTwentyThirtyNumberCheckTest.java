@@ -48,8 +48,12 @@ public class OddEvenTwentyThirtyNumberCheckTest {
 
         //Act
         String result = oddEvenTwentyThirtyNumberCheck.checkNumber(3);
-        //Assert
+        assertEquals("",result);
+
+        result = oddEvenTwentyThirtyNumberCheck.checkNumber(-3);
         assertEquals("",result);
 
     }
+
+
 }

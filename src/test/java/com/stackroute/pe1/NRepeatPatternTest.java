@@ -20,6 +20,17 @@ public class NRepeatPatternTest {
     }
 
     @Test
+    public void givenNullInputsShouldReturnNull() {
+        //arrange
+
+        //act
+        String result = nRepeatPattern.patternGenerator(null,2);
+        //assert
+        assertNull(result);
+    }
+
+
+    @Test
     public void givenOneStringOneNumberShouldReturnString() {
         //arrange
 
@@ -36,7 +47,7 @@ public class NRepeatPatternTest {
         //act
         String result = nRepeatPattern.patternGenerator("   ",2);
         //assert
-        assertEquals("       ",result);
+        assertEquals("   ",result);
     }
 
     @Test
@@ -47,6 +58,16 @@ public class NRepeatPatternTest {
         String result = nRepeatPattern.patternGenerator("Stack",0);
         //assert
         assertEquals("Stack",result);
+    }
+
+    @Test
+    public void givenOneStringOneNegativeNumberShouldReturnInputString() {
+        //arrange
+
+        //act
+        String result = nRepeatPattern.patternGenerator("stackroute",-2);
+        //assert
+        assertEquals("stackroute",result);
     }
 
 }

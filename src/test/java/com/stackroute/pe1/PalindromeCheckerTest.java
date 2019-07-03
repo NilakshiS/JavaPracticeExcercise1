@@ -20,6 +20,34 @@ public class PalindromeCheckerTest {
     }
 
     @Test
+    public void givenNonNumericInputShouldReturnNull() {
+        //Arrange
+
+        //Act
+        String result = palindromeChecker.checkForPalindrome("2345e");
+        assertNull(result);
+        result = palindromeChecker.checkForPalindrome("dskjdjs");
+        assertNull(result);
+        result = palindromeChecker.checkForPalindrome("jj353");
+        assertNull(result);
+        result = palindromeChecker.checkForPalindrome("hh6434fd");
+        assertNull(result);
+        result = palindromeChecker.checkForPalindrome("***3882-2!!");
+        assertNull(result);
+    }
+
+
+    @Test
+    public void givenNullInputShouldReturnNull() {
+        //Arrange
+
+        //Act
+        String result = palindromeChecker.checkForPalindrome(null);
+        //Assert
+        assertNull(result);
+    }
+
+    @Test
     public void givenPalindromeWithSumLessThanTwentyFiveShouldReturnPalindromeLessThanTwentyFive() {
         //Arrange
 
@@ -47,5 +75,15 @@ public class PalindromeCheckerTest {
         String result = palindromeChecker.checkForPalindrome("1234");
         //Assert
         assertEquals("The number is not palindrome",result);
+    }
+
+    @Test
+    public void givenNegativeNumberInputShouldReturnNull() {
+        //Arrange
+
+        //Act
+        String result = palindromeChecker.checkForPalindrome("-23883");
+        //Assert
+        assertNull(result);
     }
 }

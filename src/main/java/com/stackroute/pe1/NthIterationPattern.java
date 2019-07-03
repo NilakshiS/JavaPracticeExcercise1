@@ -1,3 +1,7 @@
+/*
+The patternGenerator method uses a loop to print the following output:
+1 2 2 3 3 3 4 4 4 4 5 5 5 5 5 6 6 6 6 6 6 . . . nth iteration.
+ */
 package com.stackroute.pe1;
 
 import java.util.Scanner;
@@ -14,9 +18,10 @@ public class NthIterationPattern {
     }
     public String patternGenerator (int number) {
         String output = "";
-        for (int i = 1;i <= number;i++){
-            for(int j=1;j <= i;j++){
-                output += (i+" ");
+
+        for (int i = 1;i <= number;i++){            //run first loop till the number
+            for(int j=1;j <= i;j++){                //run second loop to print the number 'number' times
+                output += (i+" ");                  //append to output
             }
         }
         return output;

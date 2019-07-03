@@ -21,6 +21,16 @@ public class SortNumberTest {
     }
 
     @Test
+    public void givenNullInputShouldReturnNull() {
+        //Arrange
+
+        //Act
+        String result = sortNumber.sortAndCheck(null);
+        //Assert
+        assertNull(result);
+    }
+
+    @Test
     public void givenCorrectSequenceSumLessThanFifteenShouldReturnSortedListAndFalse() {
         //Arrange
 
